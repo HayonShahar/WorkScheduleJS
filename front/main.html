@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<header>
+  <div id="headerStyle"></div>
+    <div id="headerTitle">
+      <h1 class="text"><span>Work schedule</span></h1>
+      <p>Order and organization app</p> 
+    </div>
+    <div class="navbar-logut" id="logoutDIV">
+      <button type="button" id="logoutBTN">Logout</button>
+    </div>
+</header>
+<body class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 navbarButtons">
+        <nav class="navbar">
+          <div class="navbar-menu">
+            <button id="CurrentScheduleBTN">Current Schedule</button>
+            <button id="MySchedule">My Schedule</button>
+            <button id="ProfileBTN">My Profile</button>
+          </div>
+          <div class="navbar-admin">
+            <button id="NewScheduleBTN">New Schedule</button>
+            <button id="EmploeeysSystemBTN">Employees System</button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="mainTable">
+      <h5 id="helloName"></h5>
+      <h2 class="title">Schedule for the current week</h2>
+      <br>
+      <h5 id="mainTableWeek" class="text"></h5>
+      <button id="previousSchedule" class="buttons">Previous schedule</button>
+      <button id="nextSchedule" class="buttons">Next schedule</button>
+      <div class="row table">
+        <div class="col-sm-12 tableDiv">
+          <table class="styled-table">
+            <thead>
+              <tr class="mainTableText">
+                  <th>Shift</th>
+                  <th id="mainSundayTitle"></th>
+                  <th id="mainMondayTitle"></th>
+                  <th id="mainTuesdayTitle"></th>
+                  <th id="mainWednesdayTitle"></th>
+                  <th id="mainThursdayTitle"></th>
+                  <th id="mainFridayTitle"></th>
+                  <th id="mainSaturdayTitle"></th>
+              </tr>
+            </thead>
+            <tbody id="mainTableTbody" class="mainTableText">
+              <tr class="mainMorningShift">
+                  <td>Morning</td>
+              </tr>
+              <tr class="mainEveningShift"> 
+                  <td>Evening</td>
+              </tr>
+              <tr class="mainSupervisorShift">
+                  <td>Shift supervisor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="mySchedule">
+      <h2 class="title">Submit your work schedule</h2>
+      <form id="workOrderForm" class="text">
+          <h2>Mark ✔ where you are available to work</h2>
+          <div class="table-container">
+            <table class="styled-table" id="myScheduleTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Morning</th>
+                        <th>Evening</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sunday:</td>
+                        <td><input type="checkbox" id="sundayMorning" name="availability" value="sunday-Morning"></td>
+                        <td><input type="checkbox" id="sundayEvening" name="availability" value="sunday-Evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Monday:</td>
+                        <td><input type="checkbox" id="mondayMorning" name="availability" value="monday-Morning"></td>
+                        <td><input type="checkbox" id="mondayEvening" name="availability" value="monday-Evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday:</td>
+                        <td><input type="checkbox" id="tuesdayMorning" name="availability" value="tuesday-Morning"></td>
+                        <td><input type="checkbox" id="tuesdayEvening" name="availability" value="tuesday-Evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday:</td>
+                        <td><input type="checkbox" id="wednesdayMorning" name="availability" value="wednesday-Morning"></td>
+                        <td><input type="checkbox" id="wednesdayEvening" name="availability" value="wednesday-Evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday:</td>
+                        <td><input type="checkbox" id="thursdayMorning" name="availability" value="thursday-Morning"></td>
+                        <td><input type="checkbox" id="thursdayEvening" name="availability" value="thursday-Evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Friday:</td>
+                        <td><input type="checkbox" id="fridayMorning" name="availability" value="friday-Morning"></td>
+                        <td><input type="checkbox" id="fridayEvening" name="availability" value="friday-Evening"></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday:</td>
+                        <td><input type="checkbox" id="saturdayMorning" name="availability" value="saturday-Morning"></td>
+                        <td><input type="checkbox" id="saturdayEvening" name="availability" value="saturday-Evening"></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+      </form>
+      <div>
+        <button type="button" class="buttons" id="workScheduleSubmitBTN">Submit Work Order</button>
+      </div>
+      <div id="myAvailability">
+        <table class="styled-table text">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Morning</th>
+              <th>Evening</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sunday</td>
+              <td id="sunday-Morning"></td>
+              <td id="sunday-Evening"></td>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td id="monday-Morning"></td>
+              <td id="monday-Evening"></td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td id="tuesday-Morning"></td>
+              <td id="tuesday-Evening"></td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td id="wednesday-Morning"></td>
+              <td id="wednesday-Evening"></td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td id="thursday-Morning"></td>
+              <td id="thursday-Evening"></td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td id="friday-Morning"></td>
+              <td id="friday-Evening"></td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td id="saturday-Morning"></td>
+              <td id="saturday-Evening"></td>
+            </tr>
+          </tbody>
+        </table>        
+      </div>
+    </div>  
+
+    <div class="profile">
+    </div>
+
+    <div class="scheduleTable">
+      <h2 class="title">Create new Schedule</h2>
+      <div class="buttonsDiv">
+        <select id="newScheduleWeekSelect"><option>Select week</option></select>
+      </div>
+      <br>
+      <div class="buttonsDiv">
+        <div id="shiftButtons" >
+          <button type="button" id="morningBTN" class="buttons">Morning shift</button>
+          <button type="button" id="eveningBTN" class="buttons">Evening shift</button>
+          <button type="button" id="nightBTN" class="buttons">Night shift</button>
+          <button type="button" id="supervisorBTN" class="buttons">Shift supervisor</button>
+        </div>
+        <br>
+        <div id="shiftButtons">
+          <button type="button" id="clearBTN" class="buttons">Clear</button>
+          <button type="button" id="saveBTN" class="buttons">Save</button>
+          <button type="button" id="addTrBTN" class="buttons">Add 3th shift</button>
+          <button type="button" id="subtractTrBTN" class="buttons">subtract 3th shift</button>
+        </div>
+      </div>
+      <div class="error" id="saveError"></div> 
+      <div class="row table">
+        <div class="col-sm-12 tableDiv">
+          <table class="styled-table">
+            <thead>
+              <tr class="tableText">
+                  <th>Shift</th>
+                  <th id="SundayTitle">Sunday</th>
+                  <th id="MondayTitle">Monday</th>
+                  <th id="TuesdayTitle">Tuesday</th>
+                  <th id="WednesdayTitle">Wednesday</th>
+                  <th id="ThursdayTitle">Thursday</th>
+                  <th id="FridayTitle">Friday</th>
+                  <th id="SaturdayTitle">Saturday</th>
+              </tr>
+            </thead>
+            <tbody id="tableTbody">
+              <tr class="morningShift">
+                  <td class="tableText">Morning</td>
+              </tr>
+              <tr class="eveningShift"> 
+                  <td class="tableText">Evening</td>
+              </tr>
+              <tr class="supervisorShift">
+                  <td class="tableText">Shift supervisor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div >
+          <button class="buttons" id="availabilityBTN">Emploeeys availability</button>
+        </div>
+
+        <div class="row availabilityDIV">
+        </div>
+      </div>
+    </div>
+
+    <div class="emploeeys">  
+      <div>
+        <h2 class="title">employees:</h2>
+        <div id="allEmployees">
+          <ul></ul>
+        </div>
+      </div>
+      <br>
+      <div>
+        <h2 class="title">Add employee to system</h2>
+        <form class="addEmployeeForm">
+          <input type="number" id="employeeId" placeholder="ID number"><br>
+          <input type="text" id="employeeName" placeholder="Name"><br>
+          <input type="text" id="employeeLastName" placeholder="Last name"><br>
+          <input type="text" id="employeePhone" placeholder="Phone number"><br>
+          <input type="text" id="employeeMail" placeholder="Mail"><br>
+          <input type="password" id="employeePassword" placeholder="Password"><br>
+          <div class="error" id="addEmployeeError"></div>
+          <button id="addEmployeeBTN" class="buttons">Add employee</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+    <footer>
+      <div id="footer">
+        <p>©כל הזכויות שמורות לשחר חיון</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/515357cd2b.js" crossorigin="anonymous"></script>
+</body>
+</html>

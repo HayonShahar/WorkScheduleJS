@@ -1,0 +1,446 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.body{
+    background-color: #d9d9d9;
+}
+
+header{
+    color: #cb8119;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    background-color: #4242428f;
+}
+
+#headerTitle{
+    position: relative
+}
+
+#headerStyle{
+    display: inline-block;
+    width: 600px;
+    height: 15px;
+    background-color: #cb8119;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin-bottom: -65px;
+}
+
+#headerTitle h1{
+    margin-bottom: 30px;
+    height: 30px;
+    font-size: 50px;
+    display: inline-block;
+}
+
+#headerTitle h1 span{
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+#headerTitle p{
+    font-size: 17px;
+    background-color: #cb8119;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+}
+
+.buttons, .deleteBTN, .dataBTN, .employeeAvailabilityBTN{
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgba(89, 127, 215, 0.25);
+}
+
+.buttons:hover, .deleteBTN:hover, .dataBTN:hover{
+    background-color: rgba(89, 127, 215, 0.449);
+}
+
+#subtractTrBTN{
+    display: none;
+}
+
+#nightBTN{
+    display: none;
+}
+
+#addEmployeeBTN, #availabilityBTN{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+nav, .navbar-logut, .text, button {
+    font-family: 'serif';
+    color: #cb8119;
+}
+
+#headerTitle, .navbar-logut button, .navbar button{
+    text-shadow: 
+    -1px -1px 0 rgb(255, 255, 255),  
+    1px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255),
+    1px 1px 0 rgb(255, 255, 255);
+}
+
+.navbar {
+    width: max-content;
+    height: 45px;
+    margin-top: -30px;
+    font-size: 17px;
+    border-radius: 0px 0px 15px 15px;
+    background-color: #4242428f;
+    color: #cb8119;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.navbarButtons{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar button {
+    background-color: transparent;
+    border: none;
+    color: #cb8119;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.navbar-logut button{
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+}
+
+.navbar button:hover, .navbar-logut button:hover{
+    font-size: 17px;
+    color: #ffffff;
+    text-shadow: 
+    -1px -1px 0 #cb8119,  
+    1px -1px 0  #cb8119,
+    -1px 1px 0  #cb8119,
+    1px 1px 0  #cb8119;
+}
+
+.selectDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#shiftButtons, #constrolButtons{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsDiv button{
+    margin: 10px;
+}
+
+.swalAvailability{
+    display: flex;
+    justify-content: space-around;
+}
+
+#availability, #unavailability{
+    font-size: 18px;
+    color: #cb8119;
+}
+
+#availability h5, #unavailability h5{
+    font-family: Ayuthaya;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#availability span, #unavailability span{
+    border-bottom: 1px solid #4242428f;
+}
+
+#employeeAvailability, .availabilityDIV{
+    margin-top: 15px;
+}
+
+.availableDIV, #myAvailability{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.mainTable{
+    background-color: #d9d9d9;
+}
+
+.addEmployeeForm input{
+    background-color: #d9d9d9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cb8119;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+}
+
+.tableDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.styled-table {
+    border: 3px solid #cb8119;
+    border-radius: 15px;
+    height: 300px;
+    width: auto;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table p {
+    font-size: 12px;
+}
+
+.styled-table thead tr {
+    background-color: #bbbbbb;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 6px;
+    text-align: center;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #bbbbbb;
+}
+
+#myScheduleTable{
+    width: 500px;
+}
+
+#myAva
+
+.tableText, .mainTableText{
+    color: black;
+}
+
+.tableText p, .mainTableText p{
+    margin: 1px;
+    text-shadow: 
+    -1px -1px 0 #3478d1,  
+    1px -1px 0  #3478d1,
+    -1px 1px 0  #3478d1,
+    1px 1px 0  #3478d1;
+    color: #ffffff;
+    background-color: #cb8119;
+    border: 2px solid #3478d1;
+    border-radius: 10px;
+}
+
+.profile p{
+    font-family: 'serif';
+}
+
+.profile h2, .title{
+    font-family: Ayuthaya;
+    font-size: 30px;
+    font-weight: 550;
+    background-image: linear-gradient(to bottom, #cb8119, #cb8119);
+    background-position: 50% 90%;
+    background-size: 600px 3px; 
+    background-repeat: no-repeat;
+
+}
+
+#profileButttons{
+    margin-top:40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profileEditForm{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: none;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#helloName{
+    font-family: Ayuthaya;
+    font-weight: 550;
+    font-size: 25px;
+    background-image: linear-gradient(to bottom, #cb8119, #cb8119);
+    background-position: 50% 90%;
+    background-size: 600px 3px; 
+    background-repeat: no-repeat;
+}
+
+#helloName span{
+    color: #cb8119;
+    text-shadow: 
+    -1px -1px 0 #000000,  
+    1px -1px 0  #000000,
+    -1px 1px 0  #000000,
+    1px 1px 0  #000000;
+}
+
+#profileDetails{
+    font-size: 18px;
+    /* color: #cb8119; */
+    color: #000000;
+    margin-top: 50px;
+    
+}
+
+#profileDetails p{
+    border-top: 3px solid #cb8119;;
+    border-left: 3px solid #cb8119;;
+    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 30px;
+    font-family: Ayuthaya;
+}
+
+#profileDetails span{
+    font-size: 15px;
+    /* color: #cb8119; */
+    color: #000000;
+}
+
+#profileDetails #colon{
+    /* color: #3478d1; */
+    font-size: 18px;
+    color: #000000;
+}
+
+.swal2-show{
+    width: 500px;
+    height: 550px;
+    font-size: 15px;
+}
+
+.scheduleTable, .mainTable, .emploeeys, .profile, .mySchedule{
+    text-align: center;
+}
+
+.table-container table {
+    margin: auto; /* Centers the table */
+}
+
+#workScheduleSubmitBTN{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#allEmployees ul{
+    list-style: none;
+}
+
+.login, .register{
+    padding: 30px;
+    border-bottom: 15px solid #cb8119;
+    border-left: 15px solid #cb8119;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.loginBody, .registerBody{
+    background-color: #4242428f;
+}
+
+.login h1, .register h1{
+    font-size: 70px;
+    margin-bottom: 100px;
+}
+
+.login h1 span, .register h1 span{
+    color: #cb8119;
+}
+
+.loginForm input, .registerForm input, .profileEditForm input{
+    background-color: transparent;
+    border: 1px solid #000000; /* Add border for clarity */
+    border-radius: 4px; /* Add border-radius for a nicer look */
+    padding: 8px;
+    margin: 10px;
+}
+
+.formsButtons{
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: #cb811990;
+}
+
+.employeeData p{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.formsButtons:hover{
+    background-color: #ca7703d7;
+}
+
+.error{
+    color: rgb(177, 17, 17);
+}
+
+.navigateDIV div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#newScheduleWeekSelect{
+    background-color: rgb(211, 211, 211);
+    border: 2px solid #cb8119;
+}
+
+footer{
+    margin-top: 15px;
+    height: 50px;
+    background-color: #4242428f;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#footer{
+    display: flex;
+    justify-content: left;
+}
+
